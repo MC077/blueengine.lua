@@ -1,0 +1,59 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Psych Engine - File I/O Functions</title>
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/header.css">
+		<link rel="stylesheet" href="../css/search.css">
+		<link rel="stylesheet" href="../css/theme.css">
+		<link rel="icon" href="../assets/icon.ico" type="image/x-icon">
+	</head>
+
+	<body>
+		<!-- Create Search Bar and Theme Boxes-->
+		<div class="sidebar"></div>
+		<div class="themeBox" onclick="switchTheme()">
+			<div class="themeDot"></div>
+			<div class="themeDot" style="margin-left: 70px"></div>
+			<button class="themeBtn" id="themeSelector"></button>
+		</div>
+
+		<!-- Load JavaScript-->
+		<script src="../js/selector.js"></script>
+		<script>createSidebarContent();</script>
+		<script src="../js/searchbar.js"></script>
+		<script src="../js/theme.js"></script>
+
+		<!-- Header -->
+		<div class="headerbox">
+			<div class="header">
+				<a href="../index.html">
+					<img width="64" src="../assets/icon.ico" alt="Psych Engine Logo" draggable="false">
+					<div class="headertext">Recategorize Later!</div>
+				</a>
+			</div>
+		</div>
+
+		<!-- Page Info -->
+		<div class="infobox">
+			<h1>File I/O Functions</h1>
+			<p><b>Functions exclusive to blue </b></p>
+			<hr>
+			<h2 id="addExtraIcon">getTextFromFile</h2>
+			<p class="methodbox">addExtraIcon(<span class="variablemarkup">tag</span>:String, <span class="variablemarkup">char</span>:String, <span class="isoptional">?</span><span class="variablemarkup">xOffset</span>:Float = 0,  <span class="isoptional">?</span><span class="variablemarkup">yOffset</span>:Float = 0,  <span class="isoptional">?</span><span class="variablemarkup">isPlayer</span>:Bool = false):String</p>
+			<p>Adds an extra icon to the healthbar, with x and y offsets, using isPlayer to flip.</p>
+			<ul>
+				<li><b><span class="variablemarkup">tag</span></b> - Sprite name.</li>
+				<li><b><span class="variablemarkup">char</span> (Optional)</b> - Icon Name, defaults to face.</li>
+				<li><b><span class="variablemarkup">xOffset</span> (Optional)</b> - X offset, used to position the icon</li>
+				<li><b><span class="variablemarkup">yOffset</span> (Optional)</b> - Y offset, used to position the icon</li>
+				<li><b><span class="variablemarkup">isPlayer</span> (Optional)</b> - Is the icon a player icon?</li>
+			</ul>
+			<h4>Examples:</h4>
+			<ul class="methoddiv">
+				<li class="exampleitem"><span class="methodexample">addExtraIcon("grandma", "pico", 25, -25, true)</span> Will add Pico's icon facing the left, 25 pixels right and 25 pixels up from the healthbars center.</li>
+			</ul>
+			<hr>
+	</body>
+</html>
