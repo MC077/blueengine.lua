@@ -292,6 +292,9 @@ function createSidebarContent(prefix) {
 		'getRandomFloat': 'uncategorized.html',
 		'debugPrint': 'uncategorized.html',
 		'getModSetting': 'uncategorized.html'
+		
+		//blue specific
+		'addExtraIcon': 'blue.html'
 	};
 
 	// Create list elements and append to itemList
