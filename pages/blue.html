@@ -55,6 +55,7 @@
 				<li class="exampleitem"><span class="methodexample">addExtraIcon("grandma", "pico", 25, -25, true)</span> Will add Pico's icon facing the left, 25 pixels right and 25 pixels up from the healthbars center.</li>
 			</ul>
 			<hr>
+				
 			<h2 id="makeLuaBar">makeLuaBar</h2>
 			<p class="methodbox">makeLuaBar(<span class="variablemarkup">tag</span>:String, <span class="variablemarkup">varToFollow</span>:String, <span class="isoptional">?</span><span class="variablemarkup">image</span>:String = "timebar",  <span class="isoptional">?</span><span class="variablemarkup">x</span>:Float = 0,  <span class="isoptional">?</span><span class="variablemarkup">y</span>:Float = 0, <span class="isoptional">?</span><span class="variablemarkup">leftImage</span>:String, <span class="isoptional">?</span><span class="variablemarkup">rightImage</span>:String, <span class="isoptional">?</span><span class="variablemarkup">direction</span>:String = 'ltr'):Void</p>
 			<p>Adds a bar, using a variable set using setVar()</p>
@@ -71,8 +72,21 @@
 			<h4>Examples:</h4>
 			<ul class="methoddiv">
 				<li class="exampleitem"><span class="methodexample">makeLuaBar('attackBar', 'attackCharge', 'attackBarImage', 1250, 40, 'attackFill', 'attackFill', 'dtu')</span> Will add a bar on the right side of the screen, using the attackCharge variable to determine its fill.</li>
-			</ul>
+			</ul> 
 			<hr>
 				
+			<h2 id="setBarColors">setBarColors</h2>
+			<p class="methodbox">setBarColors(<span class="variablemarkup">tag</span>:String, <span class="isoptional">?</span><span class="variablemarkup">leftColor</span>:FlxColor = "FFFFFF",  <span class="isoptional">?</span><span class="variablemarkup">rightColor</span>:FlxColor = '000000'):Void</p>
+			<p>Sets a lua bars colors.</p>
+			<ul>
+				<li><b><span class="variablemarkup">tag</span></b> - Sprite name.</li>
+				<li><b><span class="variablemarkup">leftColor</span> (Optional)</b> - The color of the left bar.</li>
+				<li><b><span class="variablemarkup">rightColor</span> (Optional)</b> - The color of the right bar.</li>
+			</ul>
+			<h4>Examples:</h4>
+			<ul class="methoddiv">
+				<li class="exampleitem"><span class="methodexample">setBarColors('myBar', 'FA2A2A', '696969')</span> Will set the bar "myBar" colors to red and grey.</li>
+			</ul> 
+			<hr>
 	</body>
 </html>
