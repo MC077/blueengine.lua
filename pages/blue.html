@@ -117,9 +117,23 @@
 			</ul>
 			<h4>Examples:</h4>
 			<ul class="methoddiv">
-				<li class="exampleitem"><span class="methodexample">makeLuaCharacter('picoSpeak', 'pico-speaker', 0, 0, 'picoSpeaker', true, 0)</span> Will set the bar "myBar" bounds to 0 and 5.</li>
+				<li class="exampleitem"><span class="methodexample">makeLuaCharacter('picoSpeak', 'pico-speaker', 0, 0, 'picoSpeaker', true, 0)</span> Will make a character using the 'pico-speaker' json following the chart 'picoSpeaker'.</li>
 			</ul> 
 			<hr>
 				
+				<h2 id="setSpriteRGB">setSpriteRGB</h2>
+			<p class="methodbox">setSpriteRGB(<span class="variablemarkup">tag</span>:String, <span class="isoptional">?</span><span class="variablemarkup">r</span>:Dynamic = 'FF0000', <span class="isoptional">?</span><span class="variablemarkup">g</span>:Dynamic = '00FF00',<span class="isoptional">?</span><span class="variablemarkup">b</span>:Dynamic = '0000FF',<span class="isoptional">?</span><span class="variablemarkup">a</span>:Array = null):Void</p>
+			<p>Adds the RGB shader onto a lua sprite, can be used again to change color and alpha values.</p>
+			<ul>
+				<li><b><span class="variablemarkup">tag</span></b> - Sprite name.</li>
+				<li><b><span class="variablemarkup">r</span> (Optional)</b> - Int or String of a color, used to shade the R of a sprite.</li>
+				<li><b><span class="variablemarkup">g</span> (Optional)</b> - Int or String of a color, used to shade the G of a sprite.</li>
+				<li><b><span class="variablemarkup">b</span> (Optional)</b> - Int or String of a color, used to shade the B of a sprite.</li>
+				<li><b><span class="variablemarkup">a</span> (Optional)</b> - Sets the alpha of each color.</li>
+			<h4>Examples:</h4>
+			<ul class="methoddiv">
+				<li class="exampleitem"><span class="methodexample">setSpriteRGB('boyfriend', '696969', 'FA2A2A', '00FF00', {0.5, 0.2, 1})</span> Will set boyfriends rgb shader colors to grey, red, and green, while setting the transparency of each color.</li>
+			</ul> 
+			<hr>
 	</body>
 </html>
