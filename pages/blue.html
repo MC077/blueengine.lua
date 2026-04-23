@@ -102,5 +102,24 @@
 				<li class="exampleitem"><span class="methodexample">setBarBounds('myBar', 0, 5)</span> Will set the bar "myBar" bounds to 0 and 5.</li>
 			</ul> 
 			<hr>
+				
+			<h2 id="makeLuaCharacter">makeLuaCharacter</h2>
+			<p class="methodbox">makeLuaCharacter(<span class="variablemarkup">tag</span>:String, <span class="isoptional">?</span><span class="variablemarkup">json</span>:String = 'bf', <span class="isoptional">?</span><span class="variablemarkup">x</span>:Float = 0, <span class="isoptional">?</span><span class="variablemarkup">y</span>:Float = 0, <span class="isoptional">?</span><span class="variablemarkup">chart</span>:String = '', <span class="isoptional">?</span><span class="variablemarkup">skipDance</span>:Bool = false, <span class="isoptional">?</span><span class="variablemarkup">danceEveryNumBeats</span>:Int):Void</p>
+			<p>Makes a new character, tied to a chart with an option to change the amount of beats before dancing.</p>
+			<ul>
+				<li><b><span class="variablemarkup">tag</span></b> - Sprite name.</li>"
+				<li><b><span class="variablemarkup">json</span> (Optional)</b> - name of the character to load.</li>
+				<li><b><span class="variablemarkup">x</span> (Optional)</b> - X position.</li>
+				<li><b><span class="variablemarkup">y</span> (Optional)</b> - Y position.</li>
+				<li><b><span class="variablemarkup">chart</span> (Optional)</b> - Name of the chart file to load in data/songName/</li>
+				<li><b><span class="variablemarkup">skipDance</span> (Optional)</b> - Whether the character idles or not.</li>
+				<li><b><span class="variablemarkup">danceEveryNumBeats</span> (Optional)</b> - the number of beats before the character idles.</li>
+			</ul>
+			<h4>Examples:</h4>
+			<ul class="methoddiv">
+				<li class="exampleitem"><span class="methodexample">makeLuaCharacter('picoSpeak', 'pico-speaker', 0, 0, 'picoSpeaker', true, 0)</span> Will set the bar "myBar" bounds to 0 and 5.</li>
+			</ul> 
+			<hr>
+				
 	</body>
 </html>
