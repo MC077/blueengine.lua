@@ -291,10 +291,16 @@ function createSidebarContent(prefix) {
 		'getRandomInt': 'uncategorized.html',
 		'getRandomFloat': 'uncategorized.html',
 		'debugPrint': 'uncategorized.html',
-		'getModSetting': 'uncategorized.html'
+		'getModSetting': 'uncategorized.html',
 		
 		//blue specific
-		'addExtraIcon': 'blue.html'
+		'addExtraIcon': 'blue.html',
+		'makeLuaBar': 'blue.html',
+		'setBarColors': 'blue.html',
+		'setBarBounds': 'blue.html',
+		'makeLuaCharacter': 'blue.html',
+		'setSpriteRGB': 'blue.html',
+		'removeSpriteRGB': 'blue.html'
 	};
 
 	// Create list elements and append to itemList
