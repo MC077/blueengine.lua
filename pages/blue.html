@@ -146,7 +146,26 @@
 			<h4>Examples:</h4>
 			<ul class="methoddiv">
 				<li class="exampleitem"><span class="methodexample">removeSpriteRGB('boyfriend')</span> Will remove boyfriends rgb shader .</li>
+			</ul>
+				
+			<h2 id="makeScrollingSprite">makeScrollingSprite</h2>
+			<p class="methodbox">makeScrollingSprite(<span class="variablemarkup">tag</span>:String, <span class="variablemarkup">image</span>:String, <span class="isoptional">?</span><span class="variablemarkup">x</span>:Float = 0, <span class="isoptional">?</span><span class="variablemarkup">y</span>:Float = 0, <span class="isoptional">?</span><span class="variablemarkup">axis</span>:String = 'xy', <span class="isoptional">?</span><span class="variablemarkup">velocityX</span>:Float = 0, <span class="isoptional">?</span><span class="variablemarkup">velocityY</span>:Float = 0, <span class="isoptional">?</span><span class="variablemarkup">spacing</span>:Float = 0):Void</p>
+			<p>Makes a looping sprite that scrolls.</p>
+			<ul>
+				<li><b><span class="variablemarkup">tag</span></b> - Sprite name.</li>
+				<li><b><span class="variablemarkup">image</span></b> - Image name.</li>
+				<li><b><span class="variablemarkup">x</span> (Optional)</b> - The position of the sprite on the X axis.</li>
+				<li><b><span class="variablemarkup">y</span> (Optional)</b> - The position of the sprite on the Y axis.</li>
+				<li><b><span class="variablemarkup">axis</span> (Optional)</b> - The axis on which the sprite scrolls.</li>
+				<li><b><span class="variablemarkup">velocityX</span> (Optional)</b> - The speed at which it scrolls on the X axis</li>
+				<li><b><span class="variablemarkup">velocityY</span> (Optional)</b> - The speed at which it scrolls on the Y axis</li>
+				<li><b><span class="variablemarkup">spacing</span> (Optional)</b> - The space between each loop.</li>
+			</ul>
+			<h4>Examples:</h4>
+			<ul class="methoddiv">
+				<li class="exampleitem"><span class="methodexample">makeLoopingSprite('apollo', 'apolloGay', 0, 0, 'x', 5, 0, 150)</span> Will make a scrolling sprite on the x axis with a spacing of 150 pixels.</li>
 			</ul> 
+
 
 	</body>
 </html>
