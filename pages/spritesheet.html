@@ -2,7 +2,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Psych Engine - Spritesheet Functions</title>
+		<title>Blue Engine - Spritesheet Functions</title>
 		<link rel="stylesheet" href="../css/main.css">
 		<link rel="stylesheet" href="../css/header.css">
 		<link rel="stylesheet" href="../css/search.css">
@@ -29,8 +29,8 @@
 		<div class="headerbox">
 			<div class="header">
 				<a href="../index.html">
-					<img width="64" src="../assets/icon.ico" alt="Psych Engine Logo" draggable="false">
-					<div class="headertext">Psych Engine - Lua Script API</div>
+					<img width="64" src="../assets/icon.ico" alt="Blue Engine Logo" draggable="false">
+					<div class="headertext">Blue Engine - Lua Script API</div>
 				</a>
 			</div>
 		</div>
@@ -83,6 +83,24 @@
 			<p style="color: gray">Note 2: <a href="https://github.com/ShadowMario/FNF-PsychEngine/wiki/Export-and-Import-from-Aseprite">Follow these instructions to export properly from Aseprite</a>.</p>
 			<hr>
 
+			<h2 id="makeScrollingSprite">makeScrollingSprite</h2>
+			<p class="methodbox">makeScrollingSprite(<span class="variablemarkup">tag</span>:String, <span class="variablemarkup">image</span>:String, <span class="isoptional">?</span><span class="variablemarkup">x</span>:Float = 0, <span class="isoptional">?</span><span class="variablemarkup">y</span>:Float = 0, <span class="isoptional">?</span><span class="variablemarkup">axis</span>:String = 'xy', <span class="isoptional">?</span><span class="variablemarkup">velocityX</span>:Float = 0, <span class="isoptional">?</span><span class="variablemarkup">velocityY</span>:Float = 0, <span class="isoptional">?</span><span class="variablemarkup">spacing</span>:Float = 0):Void</p>
+			<p>Makes a looping sprite that scrolls.</p>
+			<ul>
+				<li><b><span class="variablemarkup">tag</span></b> - Sprite name.</li>
+				<li><b><span class="variablemarkup">image</span></b> - Image name.</li>
+				<li><b><span class="variablemarkup">x</span> (Optional)</b> - The position of the sprite on the X axis.</li>
+				<li><b><span class="variablemarkup">y</span> (Optional)</b> - The position of the sprite on the Y axis.</li>
+				<li><b><span class="variablemarkup">axis</span> (Optional)</b> - The axis on which the sprite scrolls.</li>
+				<li><b><span class="variablemarkup">velocityX</span> (Optional)</b> - The speed at which it scrolls on the X axis</li>
+				<li><b><span class="variablemarkup">velocityY</span> (Optional)</b> - The speed at which it scrolls on the Y axis</li>
+				<li><b><span class="variablemarkup">spacing</span> (Optional)</b> - The space between each loop.</li>
+			</ul>
+			<h4>Examples:</h4>
+			<ul class="methoddiv">
+				<li class="exampleitem"><span class="methodexample">makeLoopingSprite('apollo', 'apolloGay', 0, 0, 'x', 5, 0, 150)</span> Will make a scrolling sprite on the x axis with a spacing of 150 pixels.</li>
+			</ul> 
+			
 			<h2 id="makeGraphic">makeGraphic</h2>
 			<p class="methodbox">makeGraphic(<span class="variablemarkup">tag</span>:String,
 				<span class="isoptional">?</span><span class="variablemarkup">width</span>:Int = 256,
@@ -294,6 +312,33 @@
 			<p>Returns whether a Lua Sprite with a specific tag exists.</p>
 			<ul>
 				<li><b><span class="variablemarkup">tag</span></b> - Lua Sprite nametag.</li>
+			</ul>
+
+			<h2 id="setSpriteRGB">setSpriteRGB</h2>
+			<p class="methodbox">setSpriteRGB(<span class="variablemarkup">tag</span>:String, <span class="isoptional">?</span><span class="variablemarkup">r</span>:Dynamic = 'FF0000', <span class="isoptional">?</span><span class="variablemarkup">g</span>:Dynamic = '00FF00',<span class="isoptional">?</span><span class="variablemarkup">b</span>:Dynamic = '0000FF',<span class="isoptional">?</span><span class="variablemarkup">a</span>:Array = null):Void</p>
+			<p>Adds the RGB shader onto a lua sprite, can be used again to change color and alpha values.</p>
+			<ul>
+				<li><b><span class="variablemarkup">tag</span></b> - Sprite name.</li>
+				<li><b><span class="variablemarkup">r</span> (Optional)</b> - Int or String of a color, used to shade the R of a sprite.</li>
+				<li><b><span class="variablemarkup">g</span> (Optional)</b> - Int or String of a color, used to shade the G of a sprite.</li>
+				<li><b><span class="variablemarkup">b</span> (Optional)</b> - Int or String of a color, used to shade the B of a sprite.</li>
+				<li><b><span class="variablemarkup">a</span> (Optional)</b> - Sets the alpha of each color.</li>
+			</ul>
+			<h4>Examples:</h4>
+			<ul class="methoddiv">
+				<li class="exampleitem"><span class="methodexample">setSpriteRGB('boyfriend', '696969', 'FA2A2A', '00FF00', {0.2, 0.7, 1})</span> Will set boyfriends rgb shader colors to grey, red, and green, while setting the transparency of each color.</li>
+			</ul> 
+			<hr>
+				
+			<h2 id="removeSpriteRGB">removeSpriteRGB</h2>
+			<p class="methodbox">removeSpriteRGB(<span class="variablemarkup">tag</span>:String):Void</p>
+			<p>Removes the RGB shader on a lua sprite.</p>
+			<ul>
+				<li><b><span class="variablemarkup">tag</span></b> - Sprite name.</li>
+			</ul>
+			<h4>Examples:</h4>
+			<ul class="methoddiv">
+				<li class="exampleitem"><span class="methodexample">removeSpriteRGB('boyfriend')</span> Will remove boyfriends rgb shader .</li>
 			</ul>
 		</div>
 	</body>

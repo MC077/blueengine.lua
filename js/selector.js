@@ -26,10 +26,15 @@ function createSidebarContent(prefix) {
 		'exitSong': 'playstate.html',
 		'loadSong': 'playstate.html',
 		'triggerEvent': 'playstate.html',
-		'setHealthBarColors': 'playstate.html',
-		'setTimeBarColors': 'playstate.html',
+		'addExtraIcon': 'playstate.html',
+		'makeLuaBar': 'playstate.html',
+		'setBarColors': 'playstate.html',
+		'setBarBounds': 'playstate.html',
 		'startDialogue': 'playstate.html',
 		'startVideo': 'playstate.html',
+		'makeLuaCharacter': 'playstate.html',
+
+		
 
 		// Reflection
 		'getProperty': 'reflection.html',
@@ -78,6 +83,10 @@ function createSidebarContent(prefix) {
 		'addLuaSprite': 'spritesheet.html',
 		'removeLuaSprite': 'spritesheet.html',
 		'luaSpriteExists': 'spritesheet.html',
+		'setSpriteRGB': 'spritesheet.html',
+		'removeSpriteRGB': 'spritesheet.html',
+
+		
 
 		// FlxAnimate
 		'makeFlxAnimateSprite': 'flxanimate.html',
@@ -291,16 +300,7 @@ function createSidebarContent(prefix) {
 		'getRandomInt': 'uncategorized.html',
 		'getRandomFloat': 'uncategorized.html',
 		'debugPrint': 'uncategorized.html',
-		'getModSetting': 'uncategorized.html',
-		
-		//blue specific
-		'addExtraIcon': 'blue.html',
-		'makeLuaBar': 'blue.html',
-		'setBarColors': 'blue.html',
-		'setBarBounds': 'blue.html',
-		'makeLuaCharacter': 'blue.html',
-		'setSpriteRGB': 'blue.html',
-		'removeSpriteRGB': 'blue.html'
+		'getModSetting': 'uncategorized.html'
 	};
 
 	// Create list elements and append to itemList

@@ -2,7 +2,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Psych Engine - PlayState Functions</title>
+		<title>Blue Engine - PlayState Functions</title>
 		<link rel="stylesheet" href="../css/main.css">
 		<link rel="stylesheet" href="../css/header.css">
 		<link rel="stylesheet" href="../css/search.css">
@@ -29,8 +29,8 @@
 		<div class="headerbox">
 			<div class="header">
 				<a href="../index.html">
-					<img width="64" src="../assets/icon.ico" alt="Psych Engine Logo" draggable="false">
-					<div class="headertext">Psych Engine - Lua Script API</div>
+					<img width="64" src="../assets/icon.ico" alt="Blue Engine Logo" draggable="false">
+					<div class="headertext">Blue Engine - Lua Script API</div>
 				</a>
 			</div>
 		</div>
@@ -95,32 +95,68 @@
 			</ul>
 			<hr>
 
-			<h2 id="setHealthBarColors">setHealthBarColors</h2>
-			<p class="methodbox">setHealthBarColors(<span class="variablemarkup">left</span>:String, <span class="variablemarkup">right</span>:String):Void</p>
-			<p>Changes Health Bar colors.</p>
+			<h2 id="addExtraIcon">addExtraIcon</h2>
+			<p class="methodbox">addExtraIcon(<span class="variablemarkup">tag</span>:String, <span class="variablemarkup">char</span>:String, <span class="isoptional">?</span><span class="variablemarkup">xOffset</span>:Float = 0, <span class="isoptional">?</span><span class="variablemarkup">yOffset</span>:Float = 0, <span class="isoptional">?</span><span class="variablemarkup">isPlayer</span>:Bool = false):Void</p>
+			<p>Adds an extra icon to the healthbar, with x and y offsets, using isPlayer to flip.</p>
 			<ul>
-				<li><b><span class="variablemarkup">left</span></b> - Color hexadecimal string or <a href="https://api.haxeflixel.com/flixel/util/FlxColor.html">color name</a> for the left side of the bar.</li>
-				<li><b><span class="variablemarkup">right</span></b> - Color hexadecimal string or <a href="https://api.haxeflixel.com/flixel/util/FlxColor.html">color name</a> for the right side of the bar.</li>
+				<li><b><span class="variablemarkup">tag</span></b> - Sprite name.</li>
+				<li><b><span class="variablemarkup">char</span> (Optional)</b> - Icon Name, defaults to face.</li>
+				<li><b><span class="variablemarkup">xOffset</span> (Optional)</b> - X offset, used to position the icon</li>
+				<li><b><span class="variablemarkup">yOffset</span> (Optional)</b> - Y offset, used to position the icon</li>
+				<li><b><span class="variablemarkup">isPlayer</span> (Optional)</b> - Is the icon a player icon?</li>
 			</ul>
 			<h4>Examples:</h4>
 			<ul class="methoddiv">
-				<li class="exampleitem"><span class="methodexample">setHealthBarColors('FF0000', '00FF00')</span> - Makes left side red and right side lime.</li>
-				<li class="exampleitem"><span class="methodexample">setHealthBarColors('red', 'lime')</span> - Same as above, but using color names.</li>
+				<li class="exampleitem"><span class="methodexample">addExtraIcon("grandma", "pico", 25, -25, true)</span> Will add Pico's icon facing the left, 25 pixels right and 25 pixels up from the healthbars center.</li>
 			</ul>
 			<hr>
 
-			<h2 id="setTimeBarColors">setTimeBarColors</h2>
-			<p class="methodbox">setTimeBarColors(<span class="variablemarkup">left</span>:String, <span class="variablemarkup">right</span>:String):Void</p>
-			<p>Changes Time Bar colors.</p>
+			<h2 id="makeLuaBar">makeLuaBar</h2>
+			<p class="methodbox">makeLuaBar(<span class="variablemarkup">tag</span>:String, <span class="variablemarkup">varToFollow</span>:String, <span class="isoptional">?</span><span class="variablemarkup">image</span>:String = "timebar",  <span class="isoptional">?</span><span class="variablemarkup">x</span>:Float = 0,  <span class="isoptional">?</span><span class="variablemarkup">y</span>:Float = 0, <span class="isoptional">?</span><span class="variablemarkup">leftImage</span>:String, <span class="isoptional">?</span><span class="variablemarkup">rightImage</span>:String, <span class="isoptional">?</span><span class="variablemarkup">direction</span>:String = 'ltr'):Void</p>
+			<p>Adds a bar, using a variable set using setVar()</p>
 			<ul>
-				<li><b><span class="variablemarkup">left</span></b> - Color hexadecimal string or <a href="https://api.haxeflixel.com/flixel/util/FlxColor.html">color name</a> for the left side of the bar.</li>
-				<li><b><span class="variablemarkup">right</span></b> - Color hexadecimal string or <a href="https://api.haxeflixel.com/flixel/util/FlxColor.html">color name</a> for the right side of the bar.</li>
+				<li><b><span class="variablemarkup">tag</span></b> - Sprite name.</li>
+				<li><b><span class="variablemarkup">varToFollow</span></b> - Variable to follow. Use setVar to set the variable.</li>
+				<li><b><span class="variablemarkup">image</span> (Optional)</b> - Bar image, used to determine the fill.</li>
+				<li><b><span class="variablemarkup">xOffset</span> (Optional)</b> - X, used to position the bar on the X axis.</li>
+				<li><b><span class="variablemarkup">yOffset</span> (Optional)</b> - Y, used to position the bar on the Y axis.</li>
+				<li><b><span class="variablemarkup">leftImage</span> (Optional)</b> - Sets an image used for the left bars fill. (useful for weirdly shaped bars)</li>
+				<li><b><span class="variablemarkup">rightImage</span> (Optional)</b> - Sets an image used for the right bars fill. (useful for weirdly shaped bars)</li>
+				<li><b><span class="variablemarkup">direction</span> (Optional)</b> - Sets how the bar will fill. The options are: 'ltr' (left to right), 'rtl' (right to left), 'dtu' (down to up), and 'utd' (up to down).</li>
 			</ul>
 			<h4>Examples:</h4>
 			<ul class="methoddiv">
-				<li class="exampleitem"><span class="methodexample">setTimeBarColors('FF0000', '00FF00')</span> - Makes left side red and right side lime.</li>
-				<li class="exampleitem"><span class="methodexample">setTimeBarColors('red', 'lime')</span> - Same as above, but using color names.</li>
+				<li class="exampleitem"><span class="methodexample">makeLuaBar('attackBar', 'attackCharge', 'attackBarImage', 1250, 40, 'attackFill', 'attackFill', 'dtu')</span> Will add a bar on the right side of the screen, using the attackCharge variable to determine its fill.</li>
+			</ul> 
+			<hr>
+				
+			<h2 id="setBarColors">setBarColors</h2>
+			<p class="methodbox">setBarColors(<span class="variablemarkup">tag</span>:String, <span class="isoptional">?</span><span class="variablemarkup">leftColor</span>:FlxColor = "FFFFFF",  <span class="isoptional">?</span><span class="variablemarkup">rightColor</span>:FlxColor = '000000'):Void</p>
+			<p>Sets a lua bars colors.</p>
+			<ul>
+				<li><b><span class="variablemarkup">tag</span></b> - Sprite name.</li>
+				<li><b><span class="variablemarkup">leftColor</span> (Optional)</b> - The color of the left bar.</li>
+				<li><b><span class="variablemarkup">rightColor</span> (Optional)</b> - The color of the right bar.</li>
 			</ul>
+			<h4>Examples:</h4>
+			<ul class="methoddiv">
+				<li class="exampleitem"><span class="methodexample">setBarColors('timeBar', 'FF0000', '00FF00')</span> Will set the timeBar colors to red and green.</li>
+				<li class="exampleitem"><span class="methodexample">setBarColors('timeBar', 'red', 'lime')</span> Will set the timeBar colors to red and green.</li>
+			</ul> 
+			<hr>
+				
+			<h2 id="setBarBounds">setBarBounds</h2>
+			<p class="methodbox">setBarBounds(<span class="variablemarkup">tag</span>:String, <span class="isoptional">?</span><span class="variablemarkup">min</span>:Float = 0,  <span class="isoptional">?</span><span class="variablemarkup">max</span>:Float = 1):Void</p>
+			<p>Sets a sets a bars minimum and maximum value.</p>
+			<ul>
+				<li><b><span class="variablemarkup">tag</span></b> - Sprite name.</li>
+				<li><b><span class="variablemarkup">min</span> (Optional)</b> - The minimum value a bar can have, if your value is under or equal to this it makes the bar look empty.</li>
+				<li><b><span class="variablemarkup">max</span> (Optional)</b> - The maximum value a bar can have, if your value is over or equal to this it makes the bar look full.</li>
+			</ul>
+			<h4>Examples:</h4>
+			<ul class="methoddiv">
+				<li class="exampleitem"><span class="methodexample">setBarBounds('myBar', 0, 5)</span> Will set the bar "myBar" bounds to 0 and 5.</li>
+			</ul> 
 			<hr>
 
 			<h2 id="startDialogue">startDialogue</h2>
@@ -151,6 +187,24 @@
 			<ul class="methoddiv">
 				<li class="exampleitem"><span class="methodexample">startVideo('test_video')</span> - Plays the video <span class="methodexample">mods/My-Mod/videos/test_video.mp4</span>.</li>
 			</ul>
+
+			<h2 id="makeLuaCharacter">makeLuaCharacter</h2>
+			<p class="methodbox">makeLuaCharacter(<span class="variablemarkup">tag</span>:String, <span class="isoptional">?</span><span class="variablemarkup">json</span>:String = 'bf', <span class="isoptional">?</span><span class="variablemarkup">x</span>:Float = 0, <span class="isoptional">?</span><span class="variablemarkup">y</span>:Float = 0, <span class="isoptional">?</span><span class="variablemarkup">chart</span>:String = '', <span class="isoptional">?</span><span class="variablemarkup">skipDance</span>:Bool = false, <span class="isoptional">?</span><span class="variablemarkup">danceEveryNumBeats</span>:Int):Void</p>
+			<p>Makes a new character, tied to a chart with an option to change the amount of beats before dancing. (NOT FULLY IMPLEMENTED)</p>
+			<ul>
+				<li><b><span class="variablemarkup">tag</span></b> - Sprite name.</li>
+				<li><b><span class="variablemarkup">json</span> (Optional)</b> - name of the character to load.</li>
+				<li><b><span class="variablemarkup">x</span> (Optional)</b> - X position.</li>
+				<li><b><span class="variablemarkup">y</span> (Optional)</b> - Y position.</li>
+				<li><b><span class="variablemarkup">chart</span> (Optional)</b> - Name of the chart file to load in data/songName/</li>
+				<li><b><span class="variablemarkup">skipDance</span> (Optional)</b> - Whether the character idles or not.</li>
+				<li><b><span class="variablemarkup">danceEveryNumBeats</span> (Optional)</b> - the number of beats before the character idles.</li>
+			</ul>
+			<h4>Examples:</h4>
+			<ul class="methoddiv">
+				<li class="exampleitem"><span class="methodexample">makeLuaCharacter('picoSpeak', 'pico-speaker', 0, 0, 'picoSpeaker', true, 0)</span> Will make a character using the 'pico-speaker' json following the chart 'picoSpeaker'.</li>
+			</ul> 
+			<hr>
 		</div>
 	</body>
 </html>
