@@ -98,7 +98,24 @@
 			</ul>
 			<h4>Examples:</h4>
 			<ul class="methoddiv">
-				<li class="exampleitem"><span class="methodexample">makeLoopingSprite('apollo', 'apolloGay', 0, 0, 'x', 5, 0, 150)</span> Will make a scrolling sprite on the x axis with a spacing of 150 pixels.</li>
+				<li class="exampleitem"><span class="methodexample">makeScrollingSprite('mySprite', 'mySprite', 0, 0, 'x', 5, 0, 150)</span> Will make a scrolling sprite on the x axis with a spacing of 150 pixels.</li>
+			</ul> 
+			
+			<h2 id="makeSpriteTrail">makeSpriteTrail</h2>
+			<p class="methodbox">makeSpriteTrail(<span class="variablemarkup">tag</span>:String, <span class="variablemarkup">object</span>:String, <span class="isoptional">?</span><span class="variablemarkup">length</span>:Int = 4, <span class="isoptional">?</span><span class="variablemarkup">delay</span>:Int = 24, <span class="isoptional">?</span><span class="variablemarkup">alpha</span>:Float = 0.3, <span class="isoptional">?</span><span class="variablemarkup">nextAlpha</span>:Float = 0.069, <span class="isoptional">?</span><span class="variablemarkup">image</span>:Null<String>):Void</p>
+			<p>Makes a looping sprite that scrolls.</p>
+			<ul>
+				<li><b><span class="variablemarkup">tag</span></b> - Sprite name.</li>
+				<li><b><span class="variablemarkup">object</span></b> - Object name.</li>
+				<li><b><span class="variablemarkup">length</span> (Optional)</b> - How many frames are made.</li>
+				<li><b><span class="variablemarkup">delay</span> (Optional)</b> - The delay between each frame.</li>
+				<li><b><span class="variablemarkup">alpha</span> (Optional)</b> - The opacity of the sprite.</li>
+				<li><b><span class="variablemarkup">nextAlpha</span> (Optional)</b> - The opacity of the next frame.</li>
+				<li><b><span class="variablemarkup">image</span> (Optional)</b> - The image to use for the sprite.</li>
+			</ul>
+			<h4>Examples:</h4>
+			<ul class="methoddiv">
+				<li class="exampleitem"><span class="methodexample">makeSpriteTrail('boyfriendTrail', 'boyfriend', 4, 24, 0.3, 0.069)</span> Will make a trail using BF, using the values used in thorns.</li>
 			</ul> 
 			
 			<h2 id="makeGraphic">makeGraphic</h2>
