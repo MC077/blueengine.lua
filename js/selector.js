@@ -30,6 +30,7 @@ function createSidebarContent(prefix) {
 		'makeLuaBar': 'playstate.html',
 		'setBarColors': 'playstate.html',
 		'setBarBounds': 'playstate.html',
+		'setBarSize': 'playstate.html',
 		'startDialogue': 'playstate.html',
 		'startVideo': 'playstate.html',
 		'makeLuaCharacter': 'playstate.html',
@@ -54,6 +55,7 @@ function createSidebarContent(prefix) {
 		'removeFromGroup': 'reflection.html',
 		'setObjectCamera': 'reflection.html',
 		'setScrollFactor': 'reflection.html',
+		'setColor': 'reflection.html',
 		'screenCenter': 'reflection.html',
 		'scaleObject': 'reflection.html',
 		'setGraphicSize': 'reflection.html',
@@ -71,6 +73,7 @@ function createSidebarContent(prefix) {
 		// Spritesheet
 		'makeLuaSprite': 'spritesheet.html',
 		'makeAnimatedLuaSprite': 'spritesheet.html',
+		'makeScrollingSprite': 'spritesheet.html',
 		'makeGraphic': 'spritesheet.html',
 		'loadGraphic': 'spritesheet.html',
 		'loadFrames': 'spritesheet.html',
