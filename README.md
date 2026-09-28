@@ -1,4 +1,4 @@
-# Psych Engine Lua Script API
+# Blue Engine Lua Script API
  
 ## Special Thanks to Contributors
 * LarryFrost - Pointing out countless errors in the Wiki.
